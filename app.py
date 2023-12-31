@@ -21,8 +21,9 @@ if st.button("click to compute"):
     local = {}
     local_value = splits.split("\n")
     for  v in local_value:
-        name, value = get_name_value(v)
-        local[name] = int(value)
+        if len(v) > 1:
+            name, value = get_name_value(v)
+            local[name] = int(value)
 
     idlist = []
 
